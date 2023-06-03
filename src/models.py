@@ -13,6 +13,7 @@ class User(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True, nullable=True)
     user_name = Column(String(250), nullable=True)
+    password = Column(String(250))
     favorites_id = Column(Integer, ForeignKey('favorites.id'))
     
 
